@@ -1,0 +1,22 @@
+        Property Function Decorator:
+Attribute   :variables that belong to an object.
+Property    :attributes that are controlled by methods.
+Decorator   :function that takes another function as an argument and returns a new function with added functionality.
+
+We decorate a function by placing the name of the decorator with a leading @ symbol before the definition of the function you want to decorate:
+                @decorator
+                def func(a):
+                return a
+        
+        equals to:
+                def func(a):
+                    return a
+
+                func = decorator(func)
+NOTE:
+        The @property decorator must decorate the getter method, which should have the same name as the attribute.
+
+        The docstring must go in the getter method.
+
+        The setter and deleter methods must be decorated with the same name as the getter method plus .setter and .deleter, respectively.
+
